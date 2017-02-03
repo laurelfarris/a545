@@ -5,16 +5,15 @@ import numpy as np
 #from astropy import constants as const
 
 
-''' Model inputs. All values in cgs units. '''
-
+''' Constants '''
 G = 6.67e-8
 M_sun = 1.99e33
 R_sun = 6.96e10
 M_star = 2.02 * M_sun
 R_star = 1.711 * R_sun
 
+''' 1  Model inputs. All values in cgs units. '''
 
-''' Starting with the sun for now '''
 T_eff = 5800.
 g = G*M_sun/R_sun
 
@@ -26,20 +25,22 @@ Z = 0.02
 ''' tolerance level '''
 epsilon = 0.001
 
-''' 
+'''
 Rosseland mean opacity table (given X, Y, and X) '''
 # opacity_table =
 
-''' 
+'''
 Boundary condition (pressure at top layer) '''
 const = (10**1.6)/(10**(8./3.))
 P_top = const * g**(2./3.)
 P_guess = np.zeros(2)
 
-''' 4  Solve top layer using optical depth (tau), pressure (P), density (rho) '''
-tau = np.logspace(-3, 2, 100)
-P = np.zeros(tau.size)
+''' 3  Set up optical depth (tau) and temperature (T) arrays '''
+tau = np.logspace(-3, 2, 50)
 T = np.zeros(tau.size)
+
+''' 4  Solve top layer using optical depth (tau), pressure (P), density (rho) '''
+P = np.zeros(tau.size)
 n = np.zeros(tau.size)
 rho = np.zeros(tau.size)
 opacity = np.zeros(tau.size)

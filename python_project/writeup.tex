@@ -1,0 +1,87 @@
+\documentclass[preprint]{aastex}
+\usepackage{natbib}
+\usepackage{colorx}
+\bibliographystyle{apj}
+\usepackage{verbatim}
+
+\begin{document}
+
+\title{Stellar atmosphere model}
+\author{Laurel Farris}
+\affil{New Mexico State University}
+\email{laurel@laurelfarris.com}
+
+\begin{abstract}
+    What I did
+    Motivation
+    Methods
+    Results
+    Interpretation and conclusions
+\end{abstract}
+
+\section{Introduction}\label{intro}
+
+\section{Methods}
+Assumptions: opacity is a function of wavelength, so Rosseland mean
+opacities (the ``Gray approximation'') were used.
+
+\section{Results}
+\section{Discussion}
+\section{Conclusion}
+
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c c c}
+        \hline\hline
+        Heading1 & heading2 & heading3 \\
+        \hline
+        item1 & item2 & item3 \\
+    \end{tabular}
+    \caption{caption words}
+    \label{labelname}
+\end{table}
+
+\begin{figure}[htb!]  % here, top, bottom, ignore latex's determined location
+%\begin{figure*}  % Add '*' to have figure span both columns in two-column style.
+    \figurenum{text}
+    \epsscale{num}
+    \plotone{file}
+    \plottwo{file1}{file2}  % side-by-side figures
+    \caption{(a) Physical Depth ($x$) vs. optical depth ($\tau$);
+        (b) Temperature ($T$) vs. $\tau$;
+        (c) Opacity ($\chi'$) vs. $\tau$;
+        (d) Total mass density ($\rho_{tot}$) vs. $\tau$ }
+\end{figure}
+
+\begin{figure}[htb!]  % here, top, bottom, ignore latex's determined location
+%\begin{figure*}  % Add '*' to have figure span both columns in two-column style.
+    \figurenum{text}
+    \epsscale{num}
+    \plotone{file}
+    \plottwo{file1}{file2}  % side-by-side figures
+    \caption{$P_{g}, P_{e}, and P_{e}/P_{g}$, all vs. $\tau$}
+\end{figure}
+
+\begin{figure}[htb!]  % here, top, bottom, ignore latex's determined location
+%\begin{figure*}  % Add '*' to have figure span both columns in two-column style.
+    \figurenum{text}
+    \epsscale{num}
+    \plotone{file}
+    \plottwo{file1}{file2}  % side-by-side figures
+    \caption{Electron density ($n_{e}$) and the partial electron density
+        ($n_{jk}$) contributed from each species $j$ and ionization level $k$.}
+\end{figure}
+
+\begin{figure}[htb!]  % here, top, bottom, ignore latex's determined location
+%\begin{figure*}  % Add '*' to have figure span both columns in two-column style.
+    \figurenum{text}
+    \epsscale{num}
+    \plotone{file}
+    \plottwo{file1}{file2}  % side-by-side figures
+    \caption{Hydrogen excitation fractions vs. $\tau$}
+\end{figure}
+
+\bibliography{reffile}
+
+\end{document}
